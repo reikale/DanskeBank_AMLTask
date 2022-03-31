@@ -16,7 +16,7 @@ namespace DanskeBank_AML_APIService
         {
             _dataContext = datacontext;
             _taxesController = new TaxesController(_dataContext);
-            _ruleController = new RuleController(this);
+            _ruleController = new RuleController(this, _dataContext);
         }
 
         public double TaxCalculation(string name, string date)

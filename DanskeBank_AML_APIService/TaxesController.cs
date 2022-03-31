@@ -41,5 +41,9 @@ namespace DanskeBank_AML_APIService
                 }
             }
         }
+        public bool CheckIfMunicipalityExists(string municipality)
+        {
+            return _dataContext.Municipalities.Where(x => x.Name == municipality).Any();
+        }
     }
 }

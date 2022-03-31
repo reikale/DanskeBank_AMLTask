@@ -18,6 +18,8 @@ namespace DanskeBank_AML_APIService.Data
 
         public DbSet<Municipality> Municipalities { get; set; }
         public DbSet<Taxes> Taxes { get; set; }
+        public DbSet<TaxRules> TaxRules { get; set; }
+        public DbSet<TaxType> TaxTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
