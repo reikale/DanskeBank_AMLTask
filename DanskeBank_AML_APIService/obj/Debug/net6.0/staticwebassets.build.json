@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gmdEjoFqPvbp6eFDbDrL8hmPfYaU/a/EBTLlkFcrW4Y=",
+  "Source": "DanskeBank_AML_APIService",
+  "BasePath": "_content/DanskeBank_AML_APIService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
