@@ -1,16 +1,18 @@
 ﻿using DanskeBank_AML_APIService.Data;
+using DanskeBank_AML_APIService.Interfaces;
 using DanskeBank_AML_APIService.Models;
 using DanskeBank_AMLTask_APIService.Models;
 
 namespace DanskeBank_AML_APIService
 {
-    public class TaxesController
+    public class TaxesController : ITaxesController
     {
         private DataContext _dataContext;
         public TaxesController(DataContext dataContext)
         {
             _dataContext = dataContext;
         }
+
         public List<Taxes> ReturnAllMunicipalityTaxes(string name)
         {
             return _dataContext.Taxes.Where(x => x.Municipality == name).ToList();

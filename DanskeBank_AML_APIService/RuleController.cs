@@ -1,24 +1,27 @@
 ﻿using DanskeBank_AML_APIService.Data;
+using DanskeBank_AML_APIService.Interfaces;
 using DanskeBank_AML_APIService.Models;
 using DanskeBank_AMLTask_APIService.Models;
 
 namespace DanskeBank_AML_APIService
 {
-    public class RuleController
+    public class RuleController: IRuleController
     {
-        private Calculator _calculator;
+        private ICalculator _calculator;
         private double _totalTaxRate;
-        private DataContext _dataContext;
-        public RuleController(Calculator calculator, DataContext datacontext)
+        private IDataContext _dataContext;
+        public RuleController(ICalculator calculator, IDataContext datacontext)
         {
             _calculator = calculator;
             _dataContext = datacontext;
         }
-        // RULES ACTIONS DELEGATE
+
+        // EACH RULE CALCULATION DELEGATE
         public Action[] CalculationByRule(List<Taxes> globalListOfTaxes) => new Action[]
         {
             () => AddTaxesAction(globalListOfTaxes),
             () => ChooceSmallestAction(globalListOfTaxes),
+            // -- ADDITIONAL TAX RULES COULD BE ADDED HERE --
         };
 
         // RULES AND THEIR IMPLEMENTATION
@@ -34,8 +37,14 @@ namespace DanskeBank_AML_APIService
         }
         public void ChooceSmallestAction(List<Taxes> globalListOfTaxes)
         {
-            _totalTaxRate = globalListOfTaxes.Select(x => x.TaxRate).Min();
+            if(globalListOfTaxes != null)
+            {
+                _totalTaxRate = globalListOfTaxes.Select(x => x.TaxRate).Min();
+            }
+            
         }
+        // -- ADDITIONAL TAX RULES COULD BE ADDED HERE --
+
 
         // OTHER METHODS THAT BELONGS TO RULES
         public double ReturnTotalTaxRate()

@@ -1,11 +1,12 @@
 ﻿using DanskeBank_AML_APIService.Data;
+using DanskeBank_AML_APIService.Interfaces;
 using DanskeBank_AML_APIService.Models;
 using DanskeBank_AMLTask_APIService.Models;
 using System.Collections.Generic;
 
 namespace DanskeBank_AML_APIService
 {
-    public class Calculator
+    public class Calculator: ICalculator
     {
         private DataContext _dataContext;
         private TaxesController _taxesController;

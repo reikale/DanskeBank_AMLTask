@@ -1,5 +1,6 @@
 ﻿
 using DanskeBank_AML_APIService.Controllers;
+using DanskeBank_AML_APIService.Interfaces;
 using DanskeBank_AML_APIService.Models;
 using DanskeBank_AMLTask_APIService;
 using DanskeBank_AMLTask_APIService.Models;
@@ -8,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DanskeBank_AML_APIService.Data
 {
-    public class DataContext : DbContext
+    public class DataContext : DbContext, IDataContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
@@ -29,7 +30,6 @@ namespace DanskeBank_AML_APIService.Data
             modelBuilder.Entity<TaxType>().HasData(new TaxType { Id = 2, Name = "Monthly" });
             modelBuilder.Entity<TaxType>().HasData(new TaxType { Id = 3, Name = "Weekly" });
             modelBuilder.Entity<TaxType>().HasData(new TaxType { Id = 4, Name = "Daily" });
-
         }
     }
 }

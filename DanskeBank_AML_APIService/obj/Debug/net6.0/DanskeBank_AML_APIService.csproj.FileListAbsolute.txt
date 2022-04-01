@@ -60,3 +60,5 @@ C:\Users\Inga\Documents\GitHub\DanskeBank_AMLTask\DanskeBank_AML_APIService\obj\
 C:\Users\Inga\Documents\GitHub\DanskeBank_AMLTask\DanskeBank_AML_APIService\obj\Debug\net6.0\DanskeBank_AML_APIService.genruntimeconfig.cache
 C:\Users\Inga\Documents\GitHub\DanskeBank_AMLTask\DanskeBank_AML_APIService\obj\Debug\net6.0\ref\DanskeBank_AML_APIService.dll
 C:\Users\Inga\Documents\GitHub\DanskeBank_AMLTask\DanskeBank_AML_APIService\bin\Debug\net6.0\Models\Municipality.cs
+C:\Users\Inga\Documents\GitHub\DanskeBank_AMLTask\DanskeBank_AML_APIService\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\Inga\Documents\GitHub\DanskeBank_AMLTask\DanskeBank_AML_APIService\bin\Debug\net6.0\Moq.dll
